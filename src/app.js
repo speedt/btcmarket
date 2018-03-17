@@ -9,6 +9,8 @@ var log4js = require('log4js'),
     path = require('path'),
     cwd = process.cwd();
 
+const zeroapp = require('zeroapp');
+
 log4js.configure({
   appenders: {
     app: {
@@ -32,7 +34,7 @@ log4js.configure({
 
 var logger = log4js.getLogger('app');
 
-var app = require('../../zeroapp');
+var app = zeroapp;
 
 process.on('uncaughtException', function (err){
   console.error(err.stack.red);
