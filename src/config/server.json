@@ -1,12 +1,45 @@
 {
   "development": {
-    "id": "zeroapp-2",
+    "id": "btcmarket-2",
     "host": "127.0.0.1",
-    "port": 5005
+    "port": 5005,
+    "bitcoind": {
+      "zmq": {
+        "addr": "tcp://127.0.0.1:8331",
+        "is_check": true
+      },
+      "rpc": {
+        "addr": "http://127.0.0.1:8332",
+        "userpwd": "user:pass",
+        "interval": 10
+      }
+    },
+    "kafka": {
+      "brokers": [
+        "127.0.0.1:9092",
+        "10.0.0.1:9092"
+      ]
+    }
   },
   "production": {
-    "id": "zeroapp-1",
+    "id": "btcmarket-1",
     "host": "127.0.0.1",
-    "port": 5005
+    "port": 5005,
+    "bitcoind": {
+      "zmq": {
+        "addr": "tcp://127.0.0.1:8331",
+        "is_check": true
+      },
+      "rpc": {
+        "addr": "http://127.0.0.1:8332",
+        "userpwd": "user:pass",
+        "interval": 10
+      }
+    },
+    "kafka": {
+      "brokers": [
+        "127.0.0.1:9092"
+      ]
+    }
   }
 }

@@ -47,4 +47,7 @@ process.on('exit', function (code){
 
 app.createApp(null, function(){
   var self = this;
+
+  var conf = self.get('server');
+  console.log(conf);
 });
