@@ -1,0 +1,12 @@
+{
+  "development": {
+    "id": "zeroapp-2",
+    "host": "127.0.0.1",
+    "port": 5005
+  },
+  "production": {
+    "id": "zeroapp-1",
+    "host": "127.0.0.1",
+    "port": 5005
+  }
+}
