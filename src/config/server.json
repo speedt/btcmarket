@@ -5,19 +5,18 @@
     "port": 5005,
     "bitcoind": {
       "zmq": {
-        "addr": "tcp://127.0.0.1:8331",
+        "addr": "tcp://47.104.13.9:12223",
         "is_check": true
       },
       "rpc": {
-        "addr": "http://127.0.0.1:8332",
-        "userpwd": "user:pass",
+        "addr": "http://47.104.13.9:12134",
+        "userpwd": "hx:fight",
         "interval": 10
       }
     },
     "kafka": {
       "brokers": [
-        "127.0.0.1:9092",
-        "10.0.0.1:9092"
+        "127.0.0.1:9092"
       ]
     }
   },
@@ -27,11 +26,11 @@
     "port": 5005,
     "bitcoind": {
       "zmq": {
-        "addr": "tcp://127.0.0.1:8331",
+        "addr": "tcp://127.0.0.1:12223",
         "is_check": true
       },
       "rpc": {
-        "addr": "http://127.0.0.1:8332",
+        "addr": "http://127.0.0.1:12134",
         "userpwd": "user:pass",
         "interval": 10
       }
