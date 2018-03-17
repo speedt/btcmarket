@@ -10,7 +10,8 @@
       },
       "rpc": {
         "addr": "http://47.104.13.9:12134",
-        "userpwd": "hx:fight",
+        "user": "hx",
+        "pass": "fight",
         "interval": 10
       }
     },

@@ -7,7 +7,10 @@
 
 var log4js = require('log4js'),
     path = require('path'),
-    cwd = process.cwd();
+    cwd = process.cwd(),
+    http = require('http');
+
+const ajax = require('speedt-utils').ajax;
 
 const zeroapp = require('zeroapp');
 
@@ -49,5 +52,36 @@ app.createApp(null, function(){
   var self = this;
 
   var conf = self.get('server');
-  console.log(conf);
+  var conf_rpc = conf.bitcoind.rpc;
+
+  var uri = [];
+
+  var data = {
+    'jsonrpc': '1.0',
+    'id': '1',
+    'method': 'getblocktemplate',
+    'params': [{
+      'rules': ['segwit']
+    }]
+  };
+
+  ajax(http.request, {
+    host: '47.104.13.9',
+    port: 12134,
+    path: uri.join(''),
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Basic '+ auth(conf_rpc.user, conf_rpc.pass),
+    }
+  }, JSON.stringify(data), null).then(html => {
+    console.log(html);
+  }).catch(function(){
+    console.log(arguments);
+  });
 });
+
+function auth(user, pass){
+  var safeStr = unescape(encodeURIComponent(user +':'+ pass));
+  return Buffer.from(safeStr).toString('base64');
+};
