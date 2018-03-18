@@ -5,13 +5,13 @@
     "port": 5005,
     "bitcoind": {
       "zmq": {
-        "addr": "tcp://47.104.13.9:12223",
+        "uri": "tcp://47.104.13.9:12223",
         "is_check": true
       },
       "rpc": {
-        "addr": "http://47.104.13.9:12134",
-        "user": "hx",
-        "pass": "fight",
+        "uri": "http://47.104.13.9:12134",
+        "user": "user",
+        "pass": "pass",
         "interval": 10
       }
     },
@@ -27,12 +27,13 @@
     "port": 5005,
     "bitcoind": {
       "zmq": {
-        "addr": "tcp://127.0.0.1:12223",
+        "uri": "tcp://127.0.0.1:12223",
         "is_check": true
       },
       "rpc": {
-        "addr": "http://127.0.0.1:12134",
-        "userpwd": "user:pass",
+        "uri": "http://47.104.13.9:12134",
+        "user": "hx",
+        "pass": "fight",
         "interval": 10
       }
     },

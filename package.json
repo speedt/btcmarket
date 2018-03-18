@@ -7,7 +7,8 @@
     "test": "test"
   },
   "dependencies": {
-    "speedt-utils": "0.1.75",
+    "request": "2.85.0",
+    "speedt-utils": "0.1.76",
     "log4js": "2.5.3",
     "underscore": "1.8.3"
   },
